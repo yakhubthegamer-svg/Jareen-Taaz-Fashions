@@ -274,7 +274,7 @@ checkoutBtn.addEventListener('click', () => {
         return;
     }
     
-    let message = "Hello, I would like to order the following items from Jareen Taaz Fashions:%0A%0A";
+    let message = "Hello Jareen Taaz, I would like to order the following items:%0A%0A";
     let total = 0;
     
     cart.forEach((item, i) => {
@@ -286,7 +286,7 @@ checkoutBtn.addEventListener('click', () => {
     
     message += `%0A*Total: KD ${total}*`;
     
-    window.open(`https://wa.me/96556532219?text=${message}`, '_blank');
+    window.open(`https://wa.me/96568682475?text=${message}`, '_blank');
 });
 
 // Initial UI render
@@ -352,3 +352,4 @@ searchInput.addEventListener('input', (e) => {
         }
     });
 });
+
