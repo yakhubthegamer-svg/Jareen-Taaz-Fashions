@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jareen Taaz Fashions | Premium Abayas</title>
+    <meta name="description" content="Jareen Taaz Fashions - Specialists in premium, elegant Abayas and Burkhas. Explore our latest fashion collections.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">Jareen Taaz</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i data-lucide="search" id="search-icon" style="cursor: pointer;"></i>
+                <div class="cart-icon-wrapper" id="cart-icon" style="position: relative; cursor: pointer; display: flex; align-items: center;">
+                    <i data-lucide="shopping-bag"></i>
+                    <span id="cart-count" style="position: absolute; top: -8px; right: -8px; background: var(--primary-color); color: #fff; font-size: 0.7rem; font-weight: bold; padding: 2px 6px; border-radius: 50%;">0</span>
+                </div>
+                <div class="menu-toggle"><i data-lucide="menu"></i></div>
+            </div>
+        </div>
+        <!-- Search Overlay inside nav -->
+        <div id="search-overlay" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(255, 255, 255, 0.95); padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); z-index: 1000; text-align: center; border-bottom: 1px solid #eee;">
+            <input type="text" id="search-input" placeholder="Search for abayas, colors, or fabrics..." style="width: 80%; max-width: 600px; padding: 12px 20px; font-size: 1.1rem; border: 1px solid #ddd; border-radius: 30px; outline: none; font-family: 'Montserrat', sans-serif;">
+            <i data-lucide="x" id="close-search" style="position: absolute; right: 5%; top: 50%; transform: translateY(-50%); cursor: pointer; color: #999;"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-image-wrapper">
+            <img src="images/hero.png" alt="Elegant Abaya by Jareen Taaz" class="hero-image">
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content">
+            <p class="subtitle fade-in-up">Specialist in Abayas</p>
+            <h1 class="fade-in-up delay-1">Jareen Taaz Fashions</h1>
+            <p class="description fade-in-up delay-2">Where modesty meets modern elegance. Discover our exclusive collection of hand-crafted abayas designed for the contemporary woman.</p>
+            <a href="#collection" class="btn fade-in-up delay-3">Explore Collection</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-text scroll-reveal">
+                <h2>Our Story</h2>
+                <div class="divider"></div>
+                <p>Jareen Taaz Fashions is born out of a deep passion for elegant, modest wear. As specialists in Abayas and Burkhas, we believe that fashion should be a reflection of one's inner grace.</p>
+                <p>Every piece in our collection is meticulously crafted, combining traditional silhouettes with modern aesthetics, premium fabrics, and delicate embellishments.</p>
+            </div>
+            <div class="about-features scroll-reveal">
+                <div class="feature">
+                    <i data-lucide="gem"></i>
+                    <h3>Premium Fabrics</h3>
+                    <p>Sourced globally to ensure maximum comfort and a luxurious drape.</p>
+                </div>
+                <div class="feature">
+                    <i data-lucide="scissors"></i>
+                    <h3>Tailored Perfection</h3>
+                    <p>Expert craftsmanship in every stitch, offering a flawless fit.</p>
+                </div>
+                <div class="feature">
+                    <i data-lucide="sparkles"></i>
+                    <h3>Unique Designs</h3>
+                    <p>Exclusive patterns and subtle embroidery that stand out.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section id="collection" class="collection">
+        <div class="collection-header scroll-reveal">
+            <h2>Our Exclusive Collection</h2>
+            <p>Curated styles for every occasion</p>
+        </div>
+        <div class="gallery">
+            <div class="gallery-item scroll-reveal">
+                <div class="image-container">
+                    <img src="images/gallery1.png" alt="Pastel Pink Abaya">
+                    <div class="item-overlay">
+                        <button class="view-btn" onclick="openModal('rose-modal')">View Details</button>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>The Rose Essence</h3>
+                    <p>Premium Flowy Fabric</p>
+                </div>
+            </div>
+            <div class="gallery-item scroll-reveal delay-1">
+                <div class="image-container">
+                    <img src="images/gallery2.png" alt="Emerald Green Abaya">
+                    <div class="item-overlay">
+                        <button class="view-btn" onclick="openModal('emerald-modal')">View Details</button>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Emerald Majesty</h3>
+                    <p>Modern Chic Cut</p>
+                </div>
+            </div>
+            <div class="gallery-item scroll-reveal delay-2">
+                <div class="image-container">
+                    <img src="images/gallery3.png" alt="Beige Pearl Abaya">
+                    <div class="item-overlay">
+                        <button class="view-btn" onclick="openModal('pearl-modal')">View Details</button>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Desert Pearl</h3>
+                    <p>Sophisticated Embellishments</p>
+                </div>
+            </div>
+            <div class="gallery-item scroll-reveal delay-3">
+                <div class="image-container">
+                    <img src="https://m.media-amazon.com/images/I/61LypHOMaIL._SY879_.jpg" alt="Premium Abaya">
+                    <div class="item-overlay">
+                        <button class="view-btn" onclick="openModal('midnight-modal')">View Details</button>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Midnight Elegance</h3>
+                    <p>Classic Black Silhouette</p>
+                </div>
+            </div>
+            
+            <!-- Hidden Designs -->
+            <div class="gallery-item hidden-design" style="display: none;">
+                <div class="image-container">
+                    <img src="images/gallery5.png" alt="Royal Blue Abaya">
+                    <div class="item-overlay">
+                        <button class="view-btn" onclick="openModal('sapphire-modal')">View Details</button>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Royal Sapphire</h3>
+                    <p>Intricate Silver Embroidery</p>
+                </div>
+            </div>
+            <div class="gallery-item hidden-design" style="display: none;">
+                <div class="image-container">
+                    <img src="images/gallery6.png" alt="Burgundy Velvet Abaya">
+                    <div class="item-overlay">
+                        <button class="view-btn" onclick="openModal('burgundy-modal')">View Details</button>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Burgundy Velvet</h3>
+                    <p>Rich Luxurious Texture</p>
+                </div>
+            </div>
+            <div class="gallery-item hidden-design" style="display: none;">
+                <div class="image-container">
+                    <img src="images/gallery7.png" alt="White Chiffon Abaya">
+                    <div class="item-overlay">
+                        <button class="view-btn" onclick="openModal('chiffon-modal')">View Details</button>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Pristine Chiffon</h3>
+                    <p>Delicate Lace Details</p>
+                </div>
+            </div>
+            <div class="gallery-item hidden-design" style="display: none;">
+                <div class="image-container">
+                    <img src="images/gallery8.png" alt="Golden Embellished Abaya">
+                    <div class="item-overlay">
+                        <button class="view-btn" onclick="openModal('golden-modal')">View Details</button>
+                    </div>
+                </div>
+                <div class="item-info">
+                    <h3>Golden Twilight</h3>
+                    <p>Sequin Embellishments</p>
+                </div>
+            </div>
+        </div>
+        <div class="view-all-container scroll-reveal">
+            <button id="view-all-btn" class="btn-outline">View All Designs</button>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta scroll-reveal">
+        <div class="cta-content">
+            <h2>Looking for a Custom Design?</h2>
+            <p>We offer bespoke tailoring services to create an abaya that is uniquely yours.</p>
+            <a href="https://wa.me/96556532219" target="_blank" class="btn">Book a Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>Jareen Taaz</h2>
+                <p>Elevating modest fashion with grace and style.</p>
+                <div class="socials">
+                    <i data-lucide="instagram"></i>
+                    <i data-lucide="facebook"></i>
+                    <i data-lucide="twitter"></i>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#collection">Collection</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i data-lucide="map-pin"></i> Farwaniya, Kuwait</p>
+                <p><i data-lucide="phone"></i> +965 5653 2219</p>
+                <p><i data-lucide="mail"></i> info@jareentaaz.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Jareen Taaz Fashions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Product Modals -->
+    <div id="rose-modal" class="modal">
+        <div class="modal-content fade-in-up">
+            <span class="close-modal" onclick="closeModal('rose-modal')">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="images/gallery1.png" alt="The Rose Essence">
+                </div>
+                <div class="modal-details">
+                    <h2>🌹 The Rose Essence</h2>
+                    <p class="modal-subtitle">Premium Flowy Abaya</p>
+                    <p class="modal-price">Price: KD 40</p>
+                    
+                    <div class="modal-section">
+                        <h3>Description</h3>
+                        <p>Elegant and comfortable abaya made from premium flowy fabric. Soft, lightweight, and perfect for daily wear or special occasions. Gives a graceful and modest look.</p>
+                    </div>
+                    
+                    <div class="modal-grid">
+                        <div class="modal-col">
+                            <h3>Details</h3>
+                            <ul>
+                                <li><strong>Fabric:</strong> Premium flowy fabric</li>
+                                <li><strong>Color:</strong> Rose / Soft Pink</li>
+                                <li><strong>Fit:</strong> Loose & comfortable</li>
+                                <li><strong>Length:</strong> Full length</li>
+                                <li><strong>Sleeves:</strong> Full sleeves</li>
+                            </ul>
+                        </div>
+                        <div class="modal-col">
+                            <h3>Features & Care</h3>
+                            <ul>
+                                <li>Soft, breathable & lightweight</li>
+                                <li>Elegant flowy fall</li>
+                                <li>Hand/gentle wash, do not bleach</li>
+                                <li>Dry in shade</li>
+                                <li><strong>Package:</strong> 1 Abaya</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button class="btn modal-btn add-to-cart-btn" data-name="The%20Rose%20Essence">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="emerald-modal" class="modal">
+        <div class="modal-content fade-in-up">
+            <span class="close-modal" onclick="closeModal('emerald-modal')">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="images/gallery2.png" alt="Emerald Majesty">
+                </div>
+                <div class="modal-details">
+                    <h2>💚 Emerald Majesty</h2>
+                    <p class="modal-subtitle">Modern Chic Cut Abaya</p>
+                    <p class="modal-price">Price: KD 40</p>
+                    
+                    <div class="modal-section">
+                        <h3>Description</h3>
+                        <p>Stylish and elegant abaya with a modern chic cut. Designed for a classy and trendy look while maintaining comfort. Perfect for daily wear and special occasions.</p>
+                    </div>
+                    
+                    <div class="modal-grid">
+                        <div class="modal-col">
+                            <h3>Details</h3>
+                            <ul>
+                                <li><strong>Fabric:</strong> Premium fabric</li>
+                                <li><strong>Color:</strong> Emerald Green</li>
+                                <li><strong>Fit:</strong> Modern loose fit</li>
+                                <li><strong>Length:</strong> Full length</li>
+                                <li><strong>Sleeves:</strong> Full sleeves</li>
+                            </ul>
+                        </div>
+                        <div class="modal-col">
+                            <h3>Features & Care</h3>
+                            <ul>
+                                <li>Trendy modern design</li>
+                                <li>Comfortable, breathable & smooth</li>
+                                <li>Hand/gentle wash, do not bleach</li>
+                                <li>Dry in shade</li>
+                                <li><strong>Package:</strong> 1 Abaya</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button class="btn modal-btn add-to-cart-btn" data-name="Emerald%20Majesty">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pearl-modal" class="modal">
+        <div class="modal-content fade-in-up">
+            <span class="close-modal" onclick="closeModal('pearl-modal')">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="images/gallery3.png" alt="Desert Pearl">
+                </div>
+                <div class="modal-details">
+                    <h2>🤍 Desert Pearl</h2>
+                    <p class="modal-subtitle">Sophisticated Embellished Abaya</p>
+                    <p class="modal-price">Price: KD 40</p>
+                    
+                    <div class="modal-section">
+                        <h3>Description</h3>
+                        <p>Elegant abaya with beautiful embellishments, designed for a refined and graceful look. Perfect for special occasions and stylish outings.</p>
+                    </div>
+                    
+                    <div class="modal-grid">
+                        <div class="modal-col">
+                            <h3>Details</h3>
+                            <ul>
+                                <li><strong>Fabric:</strong> Premium fabric</li>
+                                <li><strong>Color:</strong> Pearl / Beige</li>
+                                <li><strong>Fit:</strong> Loose & comfortable</li>
+                                <li><strong>Length:</strong> Full length</li>
+                                <li><strong>Sleeves:</strong> Full sleeves</li>
+                            </ul>
+                        </div>
+                        <div class="modal-col">
+                            <h3>Features & Care</h3>
+                            <ul>
+                                <li>Sophisticated embellishments</li>
+                                <li>Soft, breathable & elegant finish</li>
+                                <li>Hand wash recommended, do not bleach</li>
+                                <li>Dry in shade</li>
+                                <li><strong>Package:</strong> 1 Abaya</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button class="btn modal-btn add-to-cart-btn" data-name="Desert%20Pearl">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="midnight-modal" class="modal">
+        <div class="modal-content fade-in-up">
+            <span class="close-modal" onclick="closeModal('midnight-modal')">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="https://m.media-amazon.com/images/I/61LypHOMaIL._SY879_.jpg" alt="Midnight Elegance">
+                </div>
+                <div class="modal-details">
+                    <h2>🖤 Midnight Elegance</h2>
+                    <p class="modal-subtitle">Classic Black Abaya</p>
+                    <p class="modal-price">Price: KD 40</p>
+                    
+                    <div class="modal-section">
+                        <h3>Description</h3>
+                        <p>Timeless black abaya with a classic silhouette. Designed for a simple, elegant, and modest look—perfect for any occasion.</p>
+                    </div>
+                    
+                    <div class="modal-grid">
+                        <div class="modal-col">
+                            <h3>Details</h3>
+                            <ul>
+                                <li><strong>Fabric:</strong> Premium fabric</li>
+                                <li><strong>Color:</strong> Black</li>
+                                <li><strong>Fit:</strong> Loose & comfortable</li>
+                                <li><strong>Length:</strong> Full length</li>
+                                <li><strong>Sleeves:</strong> Full sleeves</li>
+                            </ul>
+                        </div>
+                        <div class="modal-col">
+                            <h3>Features & Care</h3>
+                            <ul>
+                                <li>Classic elegant design</li>
+                                <li>Soft, breathable & smooth finish</li>
+                                <li>Hand/gentle wash, do not bleach</li>
+                                <li>Dry in shade</li>
+                                <li><strong>Package:</strong> 1 Abaya</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button class="btn modal-btn add-to-cart-btn" data-name="Midnight%20Elegance">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sapphire-modal" class="modal">
+        <div class="modal-content fade-in-up">
+            <span class="close-modal" onclick="closeModal('sapphire-modal')">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="images/gallery5.png" alt="Royal Sapphire">
+                </div>
+                <div class="modal-details">
+                    <h2>💙 Royal Sapphire</h2>
+                    <p class="modal-subtitle">Silver Embroidered Abaya</p>
+                    <p class="modal-price">Price: KD 40</p>
+                    
+                    <div class="modal-section">
+                        <h3>Description</h3>
+                        <p>Elegant abaya featuring intricate silver embroidery on a rich sapphire tone. Perfect for a royal and graceful look at special occasions.</p>
+                    </div>
+                    
+                    <div class="modal-grid">
+                        <div class="modal-col">
+                            <h3>Details</h3>
+                            <ul>
+                                <li><strong>Fabric:</strong> Premium fabric</li>
+                                <li><strong>Color:</strong> Sapphire Blue</li>
+                                <li><strong>Fit:</strong> Loose & comfortable</li>
+                                <li><strong>Length:</strong> Full length</li>
+                                <li><strong>Sleeves:</strong> Full sleeves</li>
+                            </ul>
+                        </div>
+                        <div class="modal-col">
+                            <h3>Features & Care</h3>
+                            <ul>
+                                <li>Intricate silver embroidery</li>
+                                <li>Soft, breathable & premium finish</li>
+                                <li>Hand wash recommended, do not bleach</li>
+                                <li>Dry in shade</li>
+                                <li><strong>Package:</strong> 1 Abaya</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button class="btn modal-btn add-to-cart-btn" data-name="Royal%20Sapphire">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="burgundy-modal" class="modal">
+        <div class="modal-content fade-in-up">
+            <span class="close-modal" onclick="closeModal('burgundy-modal')">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="images/gallery6.png" alt="Burgundy Velvet">
+                </div>
+                <div class="modal-details">
+                    <h2>❤️ Burgundy Velvet</h2>
+                    <p class="modal-subtitle">Luxurious Texture Abaya</p>
+                    <p class="modal-price">Price: KD 40</p>
+                    
+                    <div class="modal-section">
+                        <h3>Description</h3>
+                        <p>Rich and elegant abaya crafted in a luxurious velvet texture. Designed to give a classy and premium look, perfect for special occasions.</p>
+                    </div>
+                    
+                    <div class="modal-grid">
+                        <div class="modal-col">
+                            <h3>Details</h3>
+                            <ul>
+                                <li><strong>Fabric:</strong> Velvet finish fabric</li>
+                                <li><strong>Color:</strong> Burgundy</li>
+                                <li><strong>Fit:</strong> Loose & comfortable</li>
+                                <li><strong>Length:</strong> Full length</li>
+                                <li><strong>Sleeves:</strong> Full sleeves</li>
+                            </ul>
+                        </div>
+                        <div class="modal-col">
+                            <h3>Features & Care</h3>
+                            <ul>
+                                <li>Soft velvet texture & premium look</li>
+                                <li>Comfortable & elegant finish</li>
+                                <li>Dry clean recommended, do not bleach</li>
+                                <li>Store in a cool, dry place</li>
+                                <li><strong>Package:</strong> 1 Abaya</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button class="btn modal-btn add-to-cart-btn" data-name="Burgundy%20Velvet">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="chiffon-modal" class="modal">
+        <div class="modal-content fade-in-up">
+            <span class="close-modal" onclick="closeModal('chiffon-modal')">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="images/gallery7.png" alt="Pristine Chiffon">
+                </div>
+                <div class="modal-details">
+                    <h2>🤍 Pristine Chiffon</h2>
+                    <p class="modal-subtitle">Lace Detail Abaya</p>
+                    <p class="modal-price">Price: KD 40</p>
+                    
+                    <div class="modal-section">
+                        <h3>Description</h3>
+                        <p>Lightweight chiffon abaya with delicate lace details, offering a soft and elegant look. Perfect for a graceful and feminine style.</p>
+                    </div>
+                    
+                    <div class="modal-grid">
+                        <div class="modal-col">
+                            <h3>Details</h3>
+                            <ul>
+                                <li><strong>Fabric:</strong> Chiffon</li>
+                                <li><strong>Color:</strong> Light / Soft tone</li>
+                                <li><strong>Fit:</strong> Loose & comfortable</li>
+                                <li><strong>Length:</strong> Full length</li>
+                                <li><strong>Sleeves:</strong> Full sleeves</li>
+                            </ul>
+                        </div>
+                        <div class="modal-col">
+                            <h3>Features & Care</h3>
+                            <ul>
+                                <li>Delicate lace detailing</li>
+                                <li>Soft, breathable & lightweight feel</li>
+                                <li>Hand wash recommended, do not bleach</li>
+                                <li>Dry in shade</li>
+                                <li><strong>Package:</strong> 1 Abaya</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button class="btn modal-btn add-to-cart-btn" data-name="Pristine%20Chiffon">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="golden-modal" class="modal">
+        <div class="modal-content fade-in-up">
+            <span class="close-modal" onclick="closeModal('golden-modal')">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="images/gallery8.png" alt="Golden Twilight">
+                </div>
+                <div class="modal-details">
+                    <h2>✨ Golden Twilight</h2>
+                    <p class="modal-subtitle">Sequin Embellished Abaya</p>
+                    <p class="modal-price">Price: KD 40</p>
+                    
+                    <div class="modal-section">
+                        <h3>Description</h3>
+                        <p>Elegant abaya with beautiful sequin embellishments that add a subtle sparkle. Perfect for evening wear and special occasions.</p>
+                    </div>
+                    
+                    <div class="modal-grid">
+                        <div class="modal-col">
+                            <h3>Details</h3>
+                            <ul>
+                                <li><strong>Fabric:</strong> Premium fabric</li>
+                                <li><strong>Color:</strong> Golden / Warm tone</li>
+                                <li><strong>Fit:</strong> Loose & comfortable</li>
+                                <li><strong>Length:</strong> Full length</li>
+                                <li><strong>Sleeves:</strong> Full sleeves</li>
+                            </ul>
+                        </div>
+                        <div class="modal-col">
+                            <h3>Features & Care</h3>
+                            <ul>
+                                <li>Stylish sequin detailing</li>
+                                <li>Soft, comfortable & elegant shine</li>
+                                <li>Hand wash recommended, do not bleach</li>
+                                <li>Dry in shade</li>
+                                <li><strong>Package:</strong> 1 Abaya</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button class="btn modal-btn add-to-cart-btn" data-name="Golden%20Twilight">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <span class="close-cart" id="close-cart">&times;</span>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items will be injected here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">KD 0</span>
+            </div>
+            <button id="checkout-btn" class="btn" style="width: 100%;">Order on WhatsApp</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
